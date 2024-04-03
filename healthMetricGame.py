@@ -13,7 +13,7 @@ def print_with_typing_effect(text):
         print(char, end='', flush=True)
         time.sleep(typing_delay)
     print()  # New line at the end
-    time.sleep(0.3)
+    time.sleep(0.1)
 
 # Function to classify health metrics
 def classify_metrics(bp_systolic, bp_diastolic, pulse, temperature):
@@ -78,7 +78,7 @@ def main():
         bp_systolic_deviation, bp_diastolic_deviation, pulse_deviation, temperature_deviation = calculate_deviation_from_normal(
             bp_systolic, bp_diastolic, pulse, temperature)
         # Display the results with typing effect
-        print_with_typing_effect(f"Name: {name} - No: {customerNo}")
+        print_with_typing_effect(f"Name: {name} - No: {customerNo+1}")
         print_with_typing_effect(
             f"Expected vs Actual - Blood Pressure: {expected_bp_status} vs {actual_bp_status}  |BP:{bp_systolic}/{bp_diastolic}| |Deviation: {bp_systolic_deviation}/{bp_diastolic_deviation}|")
         print_with_typing_effect(
